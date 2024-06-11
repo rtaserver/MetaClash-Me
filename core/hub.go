@@ -363,12 +363,12 @@ func updateExternalProvider(providerName *C.char, providerType *C.char, port C.l
 				bridge.SendToPort(i, err.Error())
 				return
 			}
-		case "ASN":
-			err := mmdb.DownloadASN(constant.Path.Resolve(providerNameString))
-			if err != nil {
-				bridge.SendToPort(i, err.Error())
-				return
-			}
+			//case "ASN":
+			//	err := mmdb.DownloadASN(constant.Path.Resolve(providerNameString))
+			//	if err != nil {
+			//		bridge.SendToPort(i, err.Error())
+			//		return
+			//	}
 		}
 		bridge.SendToPort(i, "")
 	}()
