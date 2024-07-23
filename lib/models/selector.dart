@@ -100,6 +100,18 @@ class ProxiesSelectorState with _$ProxiesSelectorState {
 }
 
 @freezed
+class ProxiesListSelectorState with _$ProxiesListSelectorState {
+  const factory ProxiesListSelectorState({
+    required List<String> groupNames,
+    required Set<String> currentUnfoldSet,
+    required ProxiesSortType proxiesSortType,
+    required ProxyCardType proxyCardType,
+    required num sortNum,
+    required int columns,
+  }) = _ProxiesListSelectorState;
+}
+
+@freezed
 class ProxyGroupSelectorState with _$ProxyGroupSelectorState {
   const factory ProxyGroupSelectorState({
     required ProxiesSortType proxiesSortType,

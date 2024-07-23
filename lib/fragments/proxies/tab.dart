@@ -83,6 +83,7 @@ class _ProxiesTabFragmentState extends State<ProxiesTabFragment>
                               .updateCurrentGroupName(
                             groupName,
                           );
+                          Navigator.of(context).pop();
                         },
                         isSelected: groupName == state.currentGroupName,
                       )

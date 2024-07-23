@@ -34,7 +34,7 @@ Config _$ConfigFromJson(Map<String, dynamic> json) => Config()
   ..isCompatible = json['isCompatible'] as bool? ?? true
   ..autoCheckUpdate = json['autoCheckUpdate'] as bool? ?? true
   ..allowBypass = json['allowBypass'] as bool? ?? true
-  ..systemProxy = json['systemProxy'] as bool? ?? true
+  ..systemProxy = json['systemProxy'] as bool? ?? false
   ..proxiesType = $enumDecodeNullable(_$ProxiesTypeEnumMap, json['proxiesType'],
           unknownValue: ProxiesType.tab) ??
       ProxiesType.tab
